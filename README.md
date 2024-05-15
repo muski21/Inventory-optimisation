@@ -70,5 +70,5 @@ Slow-Moving Items: Items with zero sales were identified, suggesting they are ca
 
 # Recommendations:
 
--Removing slow moving items from the inventory.
+- Removing slow moving items from the inventory.
 - Consolidate Warehouses to optimize space utilization.
