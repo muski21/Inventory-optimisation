@@ -24,8 +24,8 @@ The analysis uses data from the following tables:
 
 ## METHODOLOGY
 ### Step 1
--Identify item storage locations
-- Analyze where items are stored to determine if a warehouse can be eliminated based on inventory levels.
+ Identify item storage locations
+ Analyze where items are stored to determine if a warehouse can be eliminated based on inventory levels.
 
   -- Query to get item storage locations:
 
@@ -35,7 +35,7 @@ JOIN warehouses w ON p.warehouseCode = w.warehouseCode
 ORDER BY p.quantityInStock DESC;
 
 ### Step 2
-- Compare inventory levels with sales figures to assess if inventory counts are appropriate.
+ Compare inventory levels with sales figures to assess if inventory counts are appropriate.
 
 -- Query to compare inventory and sales:
 
@@ -46,8 +46,8 @@ GROUP BY p.productCode
 ORDER BY TotalSales DESC;
 
 ### Step 3
--- Identify Slow moving items
--Find items with low or zero sales to consider for removal.
+ Identify Slow moving items
+ Find items with low or zero sales to consider for removal.
 
 -- Query to find slow-moving items:
 
@@ -60,8 +60,11 @@ ORDER BY p.productName;
 
 # KEY-FINDINGS
 Item Storage Location: Items like the "1985 Toyota Supra" are stored in Warehouse A, which has significant unused capacity.
+
 Potential for Consolidation: Warehouses with lower inventory counts may be candidates for consolidation.
+
 Inventory vs. Sales: The "1985 Toyota Supra" has zero sales but substantial inventory, indicating it is not moving.
+
 Slow-Moving Items: Items with zero sales were identified, suggesting they are candidates for removal to optimize inventory.
 
 
